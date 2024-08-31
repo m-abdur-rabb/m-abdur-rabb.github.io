@@ -1,60 +1,70 @@
-# Forecasting Airline Miles Using Exponential Smoothing in Python
+# Getting Started with Create React App
 
-## Overview
-This project aims to forecast monthly airline miles traveled using various time series forecasting techniques, with a focus on Exponential Smoothing methods. The dataset used for this analysis spans from 1996 to 2005, containing monthly records of airline miles. The primary objective was to explore different models and select the one that best fits the data for accurate future forecasting.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Table of Contents
-- [Overview](#overview)
-- [Dataset](#dataset)
-- [Methodology](#methodology)
-  - [Exponential Smoothing](#exponential-smoothing)
-  - [Exploratory Data Analysis (EDA)](#exploratory-data-analysis-eda)
-  - [Decomposition](#decomposition)
-  - [Model Selection](#model-selection)
-  - [Final Model](#final-model)
-- [Results](#results)
-- [Conclusions](#conclusions)
+## Available Scripts
 
-## Dataset
-The dataset consists of monthly airline miles traveled from January 1996 to May 2005. This data is sourced from a Udemy course, providing a practical application of time series forecasting techniques.
+In the project directory, you can run:
 
-## Methodology
+### `npm start`
 
-### Exponential Smoothing
-Exponential Smoothing is a time series forecasting method for univariate data. It is particularly effective for data that exhibits trends and seasonality. There are three main types:
-1. **Simple Exponential Smoothing**: Used when data has no trend or seasonality.
-2. **Holt’s Linear Trend Model**: Extends simple exponential smoothing to capture linear trends.
-3. **Holt-Winters Seasonal Model**: Incorporates both trend and seasonal components, suitable for data with both trends and seasonality.
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-### Exploratory Data Analysis (EDA)
-- **Trend Analysis**: The time series plot showed a clear upward trend, indicating a general increase in airline miles traveled over time.
-- **Seasonality**: A repeating pattern within each year suggested the presence of seasonality, likely tied to holiday or vacation periods.
-- **Non-Stationarity**: The variability in the data increased over time, indicating the need for a model that accounts for both trend and seasonality.
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-### Decomposition
-The time series was decomposed into its components using both Multiplicative and Additive models:
-- **Multiplicative Decomposition**: Suitable when seasonal fluctuations increase or decrease with the level of the series.
-- **Additive Decomposition**: Suitable when seasonal variations are constant throughout the series.
-  
-The Multiplicative model showed more consistent residuals, indicating a better fit for this dataset.
+### `npm test`
 
-### Model Selection
-Based on the ACF and PACF plots, the Holt-Winters method was selected as it effectively incorporates both trend and seasonal components. Four variations were tested:
-1. **Additive Trend with Additive Seasonality**
-2. **Additive Trend with Multiplicative Seasonality**
-3. **Multiplicative Trend with Additive Seasonality**
-4. **Multiplicative Trend with Multiplicative Seasonality**
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### Final Model
-The model with Multiplicative Trend and Multiplicative Seasonality performed the best across all evaluation metrics (MAE, RMSE, MAPE) and was selected as the final model for forecasting future airline miles.
+### `npm run build`
 
-## Results
-The final model predicted the airline miles for the next 12 months with high accuracy, closely following the original time series patterns. This model's predictions are reliable and provide valuable insights into future trends.
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-**Evaluation Metrics for the Best Model:**
-- **MAE**: 877,575.16
-- **RMSE**: 1,075,653.07
-- **MAPE**: 1.80%
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-## Conclusions
-The Multiplicative Trend and Multiplicative Seasonality model (Holt-Winters) was the most effective in capturing the complex patterns in the airline miles data. This project demonstrated the importance of model selection and evaluation in time series forecasting, highlighting the value of using the correct combination of trend and seasonal components.
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
